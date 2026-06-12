@@ -1,0 +1,11 @@
+/* GET INVOLVED PAGE */
+.hero--get-involved {
+  min-height: 360px;
+  background-image:
+    linear-gradient(rgba(13,32,64,0.85), rgba(13,32,64,0.85)),
+    url('../images/hero-banner.png'),
+    linear-gradient(135deg, #0D2040 0%, #1A4FA0 100%);
+  background-size: cover;
+  background-position: center;
+}
+.hero--get-involved h1 { color: var(--white); }

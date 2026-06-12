@@ -1,0 +1,192 @@
+/* ============================================================
+   NAVBAR CSS — Anthony A. Adeoye for Mayor · St. Catharines 2026
+   ============================================================ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--navy);
+  box-shadow: var(--shadow-nav);
+  transition: transform 0.3s ease;
+}
+
+.navbar--hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: var(--md);
+}
+
+/* ---- Brand ---- */
+.navbar__brand {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+.brand-name {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: var(--white);
+}
+.brand-title {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ---- Nav Links ---- */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__links li a {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  padding: 4px 0;
+  position: relative;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.navbar__links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  transform-origin: left;
+}
+
+.navbar__links li a:hover,
+.navbar__links li a.active {
+  color: var(--white);
+}
+
+.navbar__links li a:hover::after,
+.navbar__links li a.active::after {
+  transform: scaleX(1);
+}
+
+/* ---- Donate Button ---- */
+.btn-donate {
+  background-color: var(--gold);
+  color: var(--white) !important;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.btn-donate:hover {
+  background-color: var(--gold-light);
+  transform: translateY(-1px);
+  color: var(--white) !important;
+}
+
+/* ---- Hamburger ---- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+  z-index: 1001;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+/* ============================================================
+   MOBILE NAV
+   ============================================================ */
+@media (max-width: 900px) {
+  .hamburger { display: flex; }
+
+  .navbar__links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--navy);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--xl);
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+    z-index: 999;
+    padding: var(--xl);
+  }
+
+  .navbar__links.open { transform: translateX(0); }
+
+  .navbar__links li a {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--white);
+  }
+
+  .navbar__links li a::after { height: 3px; }
+
+  .navbar__inner { position: relative; z-index: 1000; }
+
+  .btn-donate { font-size: 13px; padding: 8px 16px; }
+}
+
+@media (max-width: 768px) {
+  .navbar__inner { height: 64px; }
+  .brand-name { font-size: 15px; }
+  .brand-title { font-size: 10px; }
+}

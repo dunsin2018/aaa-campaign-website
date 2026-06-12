@@ -1,0 +1,217 @@
+/* ============================================================
+   FORMS CSS — Anthony A. Adeoye for Mayor · St. Catharines 2026
+   ============================================================ */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lg);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--xs);
+}
+
+.form-group label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.3px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--body-text);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-btn);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--royal);
+  box-shadow: 0 0 0 3px rgba(26,79,160,0.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--muted); }
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235A6070' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   CHECKBOX GROUP
+   ========================================== */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sm);
+  margin-top: var(--xs);
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: var(--sm);
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--body-text);
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  accent-color: var(--royal);
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   RADIO GROUP
+   ========================================== */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--md);
+  margin-top: var(--xs);
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: var(--sm);
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--body-text);
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--royal);
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   BUTTON FULL WIDTH
+   ========================================== */
+.btn-full {
+  width: 100%;
+  justify-content: center;
+  padding: 16px 28px;
+  font-size: 17px;
+}
+
+/* ==========================================
+   FORM HELPER TEXTS
+   ========================================== */
+.form-note {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  margin: 0;
+}
+
+.form-success {
+  background: rgba(10,110,86,0.1);
+  border: 1.5px solid var(--success);
+  border-radius: var(--radius-btn);
+  padding: var(--md);
+  font-size: 15px;
+  color: var(--success);
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-error {
+  background: rgba(155,28,28,0.08);
+  border: 1.5px solid var(--error);
+  border-radius: var(--radius-btn);
+  padding: var(--md);
+  font-size: 15px;
+  color: var(--error);
+  font-weight: 500;
+}
+
+/* ==========================================
+   LEGAL DISCLAIMER SECTION
+   ========================================== */
+.legal-disclaimer {
+  background: rgba(155,28,28,0.04);
+  padding: var(--xl) 0;
+  border-bottom: 1px solid rgba(155,28,28,0.1);
+}
+
+/* ==========================================
+   LAYOUT WRAPPERS
+   ========================================== */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--2xl);
+  align-items: start;
+}
+
+.get-involved-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: var(--2xl);
+  align-items: start;
+}
+
+.donate-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--2xl);
+  align-items: start;
+}
+
+.form-section {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--xl);
+}
+.form-section h3 { color: var(--navy); margin-bottom: var(--lg); font-size: 22px; }
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 900px) {
+  .contact-layout     { grid-template-columns: 1fr; }
+  .get-involved-layout{ grid-template-columns: 1fr; }
+  .donate-layout      { grid-template-columns: 1fr; }
+}

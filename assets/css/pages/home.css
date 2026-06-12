@@ -1,0 +1,20 @@
+/* HOME PAGE */
+.hero--home {
+  min-height: 700px;
+  background-image:
+    linear-gradient(to right, rgba(13,32,64,0.92) 50%, rgba(13,32,64,0.25) 100%),
+    url('../images/hero-banner.png'),
+    linear-gradient(135deg, #0D2040 0%, #1A4FA0 100%);
+  background-size: cover;
+  background-position: center;
+}
+.hero--home .hero__inner { min-height: 700px; align-items: center; }
+.hero--home h1 { color: var(--white); margin-bottom: var(--sm); }
+.hero--home h3 { color: var(--gold); font-size: 22px; margin-bottom: var(--md); }
+.hero--home .hero__intro { font-size: 17px; color: rgba(255,255,255,0.85); line-height: 1.7; margin: 0 0 var(--lg); }
+.hero__cta-group { display: flex; gap: var(--md); flex-wrap: wrap; margin-bottom: var(--lg); }
+
+@media (max-width: 768px) {
+  .hero--home { min-height: auto; background-attachment: scroll; }
+  .hero--home .hero__inner { min-height: auto; }
+}
