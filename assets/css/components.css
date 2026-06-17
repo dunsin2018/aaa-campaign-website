@@ -1166,6 +1166,11 @@
 }
 
 @media (max-width: 768px) {
+  /* Fix parallax — background-attachment:fixed is broken on iOS Safari */
+  .hero--parallax { background-attachment: scroll; }
+  /* Show top of landscape banner on portrait phones instead of cropping centre */
+  .hero { background-position: top center; background-size: cover; }
+
   .hero__inner { flex-direction: column; gap: var(--xl); padding: 56px 0; }
   .hero__left, .hero__right { flex: none; }
   .hero__headshot,

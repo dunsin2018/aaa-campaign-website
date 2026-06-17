@@ -15,6 +15,11 @@
 .hero__cta-group { display: flex; gap: var(--md); flex-wrap: wrap; margin-bottom: var(--lg); }
 
 @media (max-width: 768px) {
-  .hero--home { min-height: auto; background-attachment: scroll; }
+  .hero--home {
+    min-height: 100svh;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: top center;
+  }
   .hero--home .hero__inner { min-height: auto; }
 }
