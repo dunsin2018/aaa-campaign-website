@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://anthony4mayorstc.ca/*"
+  to   = "https://www.anthony4mayorstc.ca/:splat"
+  status = 301
+  force  = true
