@@ -194,12 +194,13 @@
         <div class="video-wrapper">
           <div class="video-embed-ratio">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/yP_YUFtuXLU"
+              id="campaignVideo"
+              src="https://www.youtube-nocookie.com/embed/yP_YUFtuXLU?rel=0"
+              data-autoplay-src="https://www.youtube-nocookie.com/embed/yP_YUFtuXLU?autoplay=1&mute=1&rel=0"
               title="Anthony A. Adeoye — Why I Am Running for Mayor of St. Catharines"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              loading="lazy">
+              allowfullscreen>
             </iframe>
           </div>
         </div>
@@ -399,6 +400,19 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      var iframe = document.getElementById('campaignVideo');
+      if (!iframe || !('IntersectionObserver' in window)) return;
+      var observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) {
+          iframe.src = iframe.dataset.autoplaySrc;
+          observer.unobserve(iframe);
+        }
+      }, { threshold: 0.5 });
+      observer.observe(iframe);
+    })();
+  </script>
   <script src="assets/js/countdown.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/mobile-nav.js"></script>
