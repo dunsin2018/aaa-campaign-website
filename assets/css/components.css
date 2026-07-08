@@ -12,7 +12,7 @@
   align-items: center;
   background-color: var(--navy);
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   overflow: hidden;
 }

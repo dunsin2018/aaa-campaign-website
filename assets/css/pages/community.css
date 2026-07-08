@@ -6,6 +6,6 @@
     url('../../images/hero-banner.png'),
     linear-gradient(135deg, #0D2040 0%, #1A4FA0 100%);
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 }
 .hero--community h1 { color: var(--white); }
