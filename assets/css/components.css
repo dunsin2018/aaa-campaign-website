@@ -1335,7 +1335,7 @@
   color: var(--white);
   max-width: 640px;
 }
-.gallery-lightbox__caption p { font-size: 16px; margin: 0 0 var(--xs); }
+.gallery-lightbox__caption p { font-size: 16px; margin: 0 0 var(--xs); color: var(--white); }
 .gallery-lightbox__counter {
   font-family: var(--font-head);
   font-size: 13px;
