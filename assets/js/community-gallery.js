@@ -25,11 +25,18 @@ document.addEventListener('DOMContentLoaded', function() {
     community: [
       { src: 'Anthony_with_families.jpg', caption: 'Anthony connecting with families in the community.' },
       { src: 'Anthony_conversing_at_Niagara_arborigional_center.jpg', caption: 'Anthony in conversation at the Niagara Regional Native Centre.' },
-      { src: 'Anthony_donating_clothings_to_salvationArmy.jpg', caption: 'Anthony donating clothing to the Salvation Army.' }
+      { src: 'Anthony_donating_clothings_to_salvationArmy.jpg', caption: 'Anthony donating clothing to the Salvation Army.' },
+      { src: 'Community_a.jpg', caption: 'Anthony connecting with residents at a community street festival.' },
+      { src: 'Community_event_at_Niagara-falls.jpg', caption: 'Anthony out meeting residents and community groups.' }
     ],
     faith: [
       { src: 'Anthony_at_st.catharines_mosque_supporting_tent_setup.jpg', caption: 'Anthony helping set up for an event at the St. Catharines Mosque.' },
-      { src: 'Anthony_having_conversation_at_central_church.jpg', caption: 'Anthony speaking with members of Central Church.' }
+      { src: 'Anthony_having_conversation_at_central_church.jpg', caption: 'Anthony speaking with members of Central Church.' },
+      { src: 'Community_Jesus-festival.jpg', caption: 'Anthony engaging with community members at a faith-based outreach event.' }
+    ],
+    meeting: [
+      { src: 'Community_speaker.jpg', caption: 'Anthony speaking with community members on health, wellness, and building stronger support systems.' },
+      { src: 'Speaker_at_a_Community_event.jpg', caption: 'Anthony addressing attendees at a community speaking engagement.' }
     ]
   };
 
