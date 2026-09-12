@@ -107,12 +107,14 @@
           </div>
 
           <div class="event-card" data-category="canvassing">
-            <div class="event-photo event-photo--placeholder">
+            <div class="event-photo event-photo--gallery" data-gallery="canvassing">
+              <img src="assets/images/Community_Engagement_Events/Anthony_on_the_street_of_downtown_speaking_to_resident.jpg" alt="Anthony speaking with a resident in downtown St. Catharines">
               <span class="event-tag">Canvassing</span>
-              <p>Photo coming soon</p>
+              <span class="gallery-count-badge"></span>
+              <span class="gallery-view-hint">&#128247; Click to view gallery</span>
             </div>
             <div class="event-info">
-              <span class="event-date">Coming 2026</span>
+              <span class="event-date">Ongoing &middot; 2026</span>
               <h3>Door-to-Door Canvassing</h3>
               <p class="event-location">&#128205; St. Catharines Neighbourhoods</p>
               <p>Anthony and his volunteers are out meeting residents across St. Catharines — listening to your concerns and sharing the vision for a stronger city.</p>
@@ -120,12 +122,14 @@
           </div>
 
           <div class="event-card" data-category="business">
-            <div class="event-photo event-photo--placeholder">
+            <div class="event-photo event-photo--gallery" data-gallery="business">
+              <img src="assets/images/Community_Engagement_Events/Anthony_supporting_business_owners.jpg" alt="Anthony showing his support for local business owners">
               <span class="event-tag">Business Visit</span>
-              <p>Photo coming soon</p>
+              <span class="gallery-count-badge"></span>
+              <span class="gallery-view-hint">&#128247; Click to view gallery</span>
             </div>
             <div class="event-info">
-              <span class="event-date">Coming 2026</span>
+              <span class="event-date">Ongoing &middot; 2026</span>
               <h3>Local Business Outreach</h3>
               <p class="event-location">&#128205; Downtown St. Catharines</p>
               <p>Anthony visits local businesses to understand their challenges and discuss how strong mayoral leadership can support economic growth in St. Catharines.</p>
@@ -133,12 +137,14 @@
           </div>
 
           <div class="event-card" data-category="community">
-            <div class="event-photo event-photo--placeholder">
+            <div class="event-photo event-photo--gallery" data-gallery="community">
+              <img src="assets/images/Community_Engagement_Events/Anthony_with_families.jpg" alt="Anthony connecting with families in the community">
               <span class="event-tag">Community Event</span>
-              <p>Photo coming soon</p>
+              <span class="gallery-count-badge"></span>
+              <span class="gallery-view-hint">&#128247; Click to view gallery</span>
             </div>
             <div class="event-info">
-              <span class="event-date">Coming 2026</span>
+              <span class="event-date">Ongoing &middot; 2026</span>
               <h3>Community Engagement Event</h3>
               <p class="event-location">&#128205; St. Catharines</p>
               <p>Connecting with residents at community events across the city — building the relationships that make St. Catharines stronger.</p>
@@ -146,12 +152,14 @@
           </div>
 
           <div class="event-card" data-category="faith">
-            <div class="event-photo event-photo--placeholder">
+            <div class="event-photo event-photo--gallery" data-gallery="faith">
+              <img src="assets/images/Community_Engagement_Events/Anthony_at_st.catharines_mosque_supporting_tent_setup.jpg" alt="Anthony helping set up for an event at the St. Catharines Mosque">
               <span class="event-tag">Faith &amp; Cultural</span>
-              <p>Photo coming soon</p>
+              <span class="gallery-count-badge"></span>
+              <span class="gallery-view-hint">&#128247; Click to view gallery</span>
             </div>
             <div class="event-info">
-              <span class="event-date">Coming 2026</span>
+              <span class="event-date">Ongoing &middot; 2026</span>
               <h3>Faith Community Visit</h3>
               <p class="event-location">&#128205; St. Catharines</p>
               <p>Anthony values the important role faith communities play in the social fabric of St. Catharines and is committed to being a mayor for all residents.</p>
@@ -180,6 +188,20 @@
         <img src="assets/images/events/Campaign_Launch_Flyer.png" alt="Campaign Launch &amp; Meet the Candidate — Adeoye A. Anthony, Candidate for Mayor, City of St. Catharines. August 22, 2026, 12:00 PM–6:00 PM, 359 Carlton Street, St. Catharines, ON L2R 2Z4. Everyone welcome." class="launch-popup-modal__img">
       </a>
     </div>
+  </div>
+
+  <!-- COMMUNITY GALLERY LIGHTBOX -->
+  <div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Community engagement photo gallery">
+    <button class="gallery-lightbox__close" id="galleryLightboxClose" aria-label="Close gallery">&times;</button>
+    <button class="gallery-lightbox__nav gallery-lightbox__nav--prev" id="galleryLightboxPrev" aria-label="Previous photo">&#10094;</button>
+    <div class="gallery-lightbox__inner">
+      <img src="" alt="" class="gallery-lightbox__img" id="galleryLightboxImg">
+      <div class="gallery-lightbox__caption">
+        <p id="galleryLightboxCaption"></p>
+        <span class="gallery-lightbox__counter" id="galleryLightboxCounter"></span>
+      </div>
+    </div>
+    <button class="gallery-lightbox__nav gallery-lightbox__nav--next" id="galleryLightboxNext" aria-label="Next photo">&#10095;</button>
   </div>
 
   <footer class="footer">
@@ -211,6 +233,7 @@
   <script src="assets/js/mobile-nav.js"></script>
   <script src="assets/js/election-banner.js"></script>
   <script src="assets/js/gallery-filter.js"></script>
+  <script src="assets/js/community-gallery.js"></script>
   <script src="assets/js/scroll-animations.js"></script>
   <script src="assets/js/cookie-consent.js"></script>
   <script src="assets/js/launch-popup.js"></script>
