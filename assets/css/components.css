@@ -495,6 +495,51 @@
   border: 0;
 }
 
+.yt-facade {
+  cursor: pointer;
+}
+.yt-facade img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.yt-facade__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(13,32,64,0.75);
+  border: 2px solid rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.yt-facade__play::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-style: solid;
+  border-width: 11px 0 11px 18px;
+  border-color: transparent transparent transparent var(--white);
+}
+.yt-facade:hover .yt-facade__play,
+.yt-facade__play:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
 .issue-video-card__caption { padding: var(--md); background: var(--white); }
 .issue-video-card__caption p {
   font-family: var(--font-head);
