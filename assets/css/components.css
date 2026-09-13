@@ -468,6 +468,41 @@
   font-size: 17px;
   color: var(--body-text);
 }
+.city-showcase__body p { margin-bottom: var(--lg); }
+
+/* ==========================================
+   ISSUE VIDEO CARDS
+   ========================================== */
+.issue-video-card {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: var(--navy);
+}
+
+.issue-video-card__ratio {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.issue-video-card__ratio iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.issue-video-card__caption { padding: var(--md); background: var(--white); }
+.issue-video-card__caption p {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+}
 
 /* ==========================================
    COMMUNITY GRID

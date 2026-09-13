@@ -226,41 +226,57 @@
       </div>
     </section>
 
-    <!-- CITY SHOWCASE -->
+    <!-- ISSUE SPOTLIGHTS -->
     <section class="section-padding bg-off-white">
       <div class="container">
         <div class="text-center animate-fade-in">
-          <p class="label-tag">OUR CITY</p>
-          <h2>St. Catharines — A City Worth Fighting For</h2>
+          <p class="label-tag">ISSUE SPOTLIGHTS</p>
+          <h2>Anthony on the Issues That Matter</h2>
         </div>
         <div class="city-showcase__grid mt-xl">
-          <div class="city-card animate-slide-up delay-1">
-            <img src="assets/images/city/city-montebello-park.jpg"
-                 alt="Montebello Park"
-                 class="city-card__img"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="city-card__placeholder" style="display:none">Montebello Park — Photo Coming Soon</div>
-            <div class="city-card__caption"><p>Montebello Park — The Garden City's Heart</p></div>
+          <div class="issue-video-card animate-slide-up delay-1">
+            <div class="issue-video-card__ratio">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/uNBiS7oMq10?rel=0"
+                data-autoplay-src="https://www.youtube-nocookie.com/embed/uNBiS7oMq10?autoplay=1&mute=1&rel=0"
+                title="Anthony A. Adeoye on Housing Affordability"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="issue-video-card__caption"><p>Housing Affordability</p></div>
           </div>
-          <div class="city-card animate-slide-up delay-2">
-            <img src="assets/images/city/city-port-dalhousie.jpg"
-                 alt="Port Dalhousie"
-                 class="city-card__img"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="city-card__placeholder" style="display:none">Port Dalhousie — Photo Coming Soon</div>
-            <div class="city-card__caption"><p>Port Dalhousie — Our Waterfront Community</p></div>
+          <div class="issue-video-card animate-slide-up delay-2">
+            <div class="issue-video-card__ratio">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/ZELaQTDDLxI?rel=0"
+                data-autoplay-src="https://www.youtube-nocookie.com/embed/ZELaQTDDLxI?autoplay=1&mute=1&rel=0"
+                title="Anthony A. Adeoye on Responsible Fiscal Management"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="issue-video-card__caption"><p>Responsible Fiscal Management</p></div>
           </div>
-          <div class="city-card animate-slide-up delay-3">
-            <img src="assets/images/city/city-welland-canal.jpg"
-                 alt="The Welland Canal"
-                 class="city-card__img"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="city-card__placeholder" style="display:none">Welland Canal — Photo Coming Soon</div>
-            <div class="city-card__caption"><p>The Welland Canal — Our Economic Lifeline</p></div>
+          <div class="issue-video-card animate-slide-up delay-3">
+            <div class="issue-video-card__ratio">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/OOZwUGB5L60?rel=0"
+                data-autoplay-src="https://www.youtube-nocookie.com/embed/OOZwUGB5L60?autoplay=1&mute=1&rel=0"
+                title="Anthony A. Adeoye on Economic Growth &amp; Small Business"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="issue-video-card__caption"><p>Economic Growth &amp; Small Business</p></div>
           </div>
         </div>
         <div class="city-showcase__body mt-xl">
-          <p>St. Catharines is the largest city in Niagara Region — home to 144,829 residents and one of Ontario's most historically significant communities. It deserves a mayor with the vision and capability to lead it to its next level.</p>
+          <p>These are just a few of the issues shaping this campaign. Explore Anthony's full platform and 10 commitments to St. Catharines.</p>
+          <a href="platform.html" class="btn-outline">See Full Platform &rarr;</a>
         </div>
       </div>
     </section>
@@ -436,15 +452,17 @@
 
   <script>
     (function () {
-      var iframe = document.getElementById('campaignVideo');
-      if (!iframe || !('IntersectionObserver' in window)) return;
+      var iframes = document.querySelectorAll('iframe[data-autoplay-src]');
+      if (!iframes.length || !('IntersectionObserver' in window)) return;
       var observer = new IntersectionObserver(function (entries) {
-        if (entries[0].isIntersecting) {
-          iframe.src = iframe.dataset.autoplaySrc;
-          observer.unobserve(iframe);
-        }
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.src = entry.target.dataset.autoplaySrc;
+            observer.unobserve(entry.target);
+          }
+        });
       }, { threshold: 0.5 });
-      observer.observe(iframe);
+      iframes.forEach(function (iframe) { observer.observe(iframe); });
     })();
   </script>
   <script src="assets/js/countdown.js"></script>
