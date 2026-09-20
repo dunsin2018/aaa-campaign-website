@@ -100,7 +100,7 @@
     </section>
 
     <!-- VOLUNTEER FORM + NEWSLETTER -->
-    <section class="section-padding bg-white">
+    <section class="section-padding bg-white" id="volunteer">
       <div class="container">
         <div class="get-involved-layout">
           <div>
@@ -261,5 +261,11 @@
   <script src="assets/js/scroll-animations.js"></script>
   <script src="assets/js/cookie-consent.js"></script>
   <script src="assets/js/launch-popup.js"></script>
+  <script>
+    if (/[?&]lawn-sign=1/.test(location.search) || location.hash === '#lawn-sign') {
+      document.getElementById('lawnSignModal').classList.add('open');
+    }
+  </script>
+  <script src="assets/js/join-popup.js"></script>
 </body>
 </html>
